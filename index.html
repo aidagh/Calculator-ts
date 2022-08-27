@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./scss/dist/styles.css" />
+    <title>Calculater</title>
+  </head>
+  <body>
+      <div class="wrapper">
+        <div class="calc-container">
+
+          <div class="result" id="result"></div>
+          <div class="buttons">
+            <button class="button" id="clean-btn">C</button>
+            <button class="button" id="open">(</button>
+            <button class="button" id="close">)</button>
+            <button class="button" id="multiply-btn">*</button>
+            <button class="button" id="seven-btn">7</button>
+            <button class="button" id="eight-btn">8</button>
+            <button class="button" id="nine-btn">9</button>
+            <button class="button" id="mines-btn">-</button>
+            <button class="button" id="four-btn">4</button>
+            <button class="button" id="five-btn">5</button>
+            <button class="button" id="six-btn">6</button>
+            <button class="button" id="plus-btn">+</button>
+            <button class="button" id="one-btn">1</button>
+            <button class="button" id="two-btn">2</button>
+            <button class="button" id="three-btn">3</button>
+            <button class="button" id="divide-btn">/</button>
+            <button class="button" id="dot-btn">.</button>
+            <button class="button" id="zero-btn">0</button>
+            <button class="button" id="equal-btn">=</button>
+          </div>
+        </div>
+        <div id="history">
+          
+          <ul class="historyItems" id="historyItems">
+            <h3>History</h3>
+          </ul>
+        </div>
+      </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

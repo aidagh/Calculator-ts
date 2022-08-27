@@ -1,0 +1,137 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width: 100%;
+  font-size: 1rem;
+  background-color: rgb(243, 243, 243);
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+
+}
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(5,1fr);
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+
+  
+  
+  .button{
+    padding: 1.5rem ;
+    border-radius: 50px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+#equal-btn {
+  width: 220%;
+  border-radius: 50px;
+  background-color: rgb(126, 11, 220);
+  color: #fff;
+}
+#multiply-btn,
+#mines-btn,
+#plus-btn,
+#divide-btn {
+  background-color: rgb(225, 211, 236);
+}
+#clean-btn {
+  background-color: orange;
+  color: #fff;
+}
+
+#open,
+#close {
+  background-color: rgb(242, 236, 225);
+}
+
+.result {
+  display: flex;
+  font-size: 2rem;
+  height: 10vh;
+  width: 100%;
+  align-items: flex-end;
+  padding: 2rem;
+}
+
+.historyItems{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1rem;
+  list-style: none;
+  
+}
+#history{
+  display: flex;
+  justify-content: flex-start;
+  background-color: #fff;
+  margin: 2rem;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  height: 20vh;
+  width: 50%;
+  padding: 1rem;
+  overflow: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+
+  
+}
+.historyItems{
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.item{
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: space-between;
+  align-items: center;
+}
+.result{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #fff;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  color: gray;
+  font-size: 1rem;
+}
+.calc-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  background-color: #fff;
+
+}
