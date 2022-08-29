@@ -1,18 +1,24 @@
 
+
+//Remove function to removing list items from the history
 const remove = (elemet: HTMLElement): void => {
   if (elemet && elemet.parentNode) {
     elemet.parentNode.removeChild(elemet);
   }
 };
+
+
 //Get numbers and operators and show the result
-let result = document.getElementById("result");
-let buttons = Array.from(document.getElementsByClassName("button"));
+let result = document.getElementById('result');
+let btnArray: HTMLCollection = document.getElementsByClassName('button')
+let buttons = [...btnArray];
+
 
 const historyItems = document.getElementById("historyItems");
 const item =document.getElementsByClassName("item")
 
 
-buttons.map((button) => {
+buttons.map((button :any ) => {
   button.addEventListener("click", (e) => {
     const input =e.target as HTMLElement;
     const textnode = document.createTextNode(`${result!.innerText}`);
@@ -47,5 +53,4 @@ buttons.map((button) => {
     
   });
 });
-
 

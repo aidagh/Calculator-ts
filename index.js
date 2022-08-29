@@ -1,35 +1,41 @@
-var remove = function (elemet) {
+"use strict";
+//Remove function to removing list items from the history
+const remove = (elemet) => {
     if (elemet && elemet.parentNode) {
         elemet.parentNode.removeChild(elemet);
     }
 };
 //Get numbers and operators and show the result
-var result = document.getElementById("result");
-var buttons = Array.from(document.getElementsByClassName("button"));
-var historyItems = document.getElementById("historyItems");
-var item = document.getElementsByClassName("item");
-buttons.map(function (button) {
-    button.addEventListener("click", function (e) {
-        var input = e.target;
-        var textnode = document.createTextNode("".concat(result.innerText));
+let result = document.getElementById('result');
+let btnArray = document.getElementsByClassName('button');
+let buttons = [...btnArray];
+// //Get numbers and operators and show the result
+// let result = document.getElementById("result");
+// let buttons = Array.from(document.getElementsByClassName("button"));
+const historyItems = document.getElementById("historyItems");
+// const item =document.getElementsByClassName("item")
+buttons.map((button) => {
+    button.addEventListener("click", (e) => {
+        const input = e.target;
+        const textnode = document.createTextNode(`${result.innerText}`);
         switch (input.innerText) {
             case "C":
                 result.innerText = "";
                 break;
             case "=":
                 try {
-                    var list_1 = document.createElement("li");
-                    list_1.className = "item";
-                    var trash = document.createElement("img");
+                    let list = document.createElement("li");
+                    list.className = "item";
+                    const trash = document.createElement("img");
                     trash.src = "trash.svg";
                     trash.id = "trash";
                     trash.addEventListener("click", function () {
-                        remove(list_1);
+                        remove(list);
                     });
-                    var answer = document.createTextNode("".concat(result.innerText, " =  ").concat(eval(result.innerText)));
-                    list_1.appendChild(answer);
-                    list_1.appendChild(trash);
-                    historyItems === null || historyItems === void 0 ? void 0 : historyItems.insertBefore(list_1, historyItems.childNodes[""]);
+                    const answer = document.createTextNode(`${result.innerText} =  ${eval(result.innerText)}`);
+                    list.appendChild(answer);
+                    list.appendChild(trash);
+                    historyItems === null || historyItems === void 0 ? void 0 : historyItems.insertBefore(list, historyItems.childNodes[""]);
                     result === null || result === void 0 ? void 0 : result.innerText = eval(result === null || result === void 0 ? void 0 : result.innerText);
                 }
                 catch (_a) {
@@ -41,3 +47,4 @@ buttons.map(function (button) {
         }
     });
 });
+// 
